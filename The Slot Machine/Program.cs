@@ -6,7 +6,11 @@
         {//Create a menu for the game
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
-            Console.WriteLine("Player decide how many lines to play, £1 per line");
+            Console.WriteLine("Player decide which lines to play, £1 per line");
+            Console.WriteLine();
+            Console.WriteLine("LINE OPTIONS : ");
+            Console.WriteLine();
+            Console.WriteLine("Top line, middle line, bottom line, all lines");
             Console.ReadLine();
         }
     }//Design a game where the user can play a make believe slot machine
