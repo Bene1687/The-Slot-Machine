@@ -21,6 +21,7 @@
             Console.WriteLine("LINE OPTIONS : 1 = Top horizontal, 2 = Middle horizontal, 3 = Bottom horizontal, 4 = Top vertical, 5 = Middle vertical, 6 = Bottom vertical, 7 = First diagonal, 8 = Second diagonal, 9 = all lines");
             Console.WriteLine();
             int answer = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("you entered : " + answer);
         }
     }//Design a game where the user can play a make believe slot machine
     //How do I want my slot machine to work?
