@@ -13,6 +13,10 @@
             const int FIRST_DIAGONAL = 7;
             const int SECOND_DIAGONAL = 8;
             const int ALL_LINES = 9;
+            Random number = new Random();
+            List<int> lines = new List<int>(3);
+            int index = number.Next();
+
             //Create a menu for the game
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
