@@ -26,6 +26,7 @@
             Console.WriteLine();
             int answer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("you entered : " + answer);
+            int[,] Grid = new int[3,3];
         }
     }//Design a game where the user can play a make believe slot machine
     //How do I want my slot machine to work?
