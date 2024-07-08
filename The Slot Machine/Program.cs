@@ -26,7 +26,16 @@
             Console.WriteLine();
             int answer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("you entered : " + answer);
-            int[,] Grid = new int[3,3];
+            int[,] Grid = new int[2,2];
+            Grid [0,0] = index;
+            Grid [0,1] = index;
+            Grid [0,2] = index;
+            Grid [1,0] = index;
+            Grid [1,1] = index;
+            Grid [1,2] = index;
+            Grid [2,0] = index;
+            Grid [2,1] = index;
+            Grid [2,2] = index;
         }
     }//Design a game where the user can play a make believe slot machine
     //How do I want my slot machine to work?
