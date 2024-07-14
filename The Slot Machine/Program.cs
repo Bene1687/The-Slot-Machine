@@ -32,6 +32,12 @@
                 Console.WriteLine(Grid[lineIndex,0]);
                 Console.WriteLine(Grid[lineIndex,1]);
                 Console.WriteLine(Grid[lineIndex,2]);
+                for (int lineIndex2 = 0;lineIndex2 < 3; lineIndex2++)
+                {
+                    Console.WriteLine(Grid[0,lineIndex2]);
+                    Console.WriteLine(Grid[1,lineIndex2]);
+                    Console.WriteLine(Grid[2,lineIndex2]);
+                }
             }
         }
     }//Design a game where the user can play a make believe slot machine
