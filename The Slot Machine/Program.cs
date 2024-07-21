@@ -29,14 +29,14 @@
             int[,] Grid = new int[3,3];
             for (int lineIndex = 0; lineIndex < 3; lineIndex++)
             {
-                Console.WriteLine(Grid[lineIndex,0]);
-                Console.WriteLine(Grid[lineIndex,1]);
-                Console.WriteLine(Grid[lineIndex,2]);
+                Grid[lineIndex,0] = index;
+                Grid[lineIndex,1] = index;
+                Grid[lineIndex,2] = index;
                 for (int lineIndex2 = 0;lineIndex2 < 3; lineIndex2++)
                 {
-                    Console.WriteLine(Grid[0,lineIndex2]);
-                    Console.WriteLine(Grid[1,lineIndex2]);
-                    Console.WriteLine(Grid[2,lineIndex2]);
+                    Grid[0,lineIndex2] = index;
+                    Grid[1,lineIndex2] = index;
+                    Grid[2,lineIndex2] = index;
                 }
             }
         }
