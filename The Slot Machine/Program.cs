@@ -15,7 +15,7 @@
             const int ALL_LINES = 9;
             Random number = new Random();
             List<int> lines = new List<int>(3);
-            int index = number.Next();
+            
 
             //Create a menu for the game
             Console.WriteLine("SLOT MACHINE");
@@ -29,14 +29,11 @@
             int[,] Grid = new int[3,3];
             for (int lineIndex = 0; lineIndex < 3; lineIndex++)
             {
-                Grid[lineIndex,0] = index;
-                Grid[lineIndex,1] = index;
-                Grid[lineIndex,2] = index;
                 for (int lineIndex2 = 0;lineIndex2 < 3; lineIndex2++)
                 {
-                    Grid[0,lineIndex2] = index;
-                    Grid[1,lineIndex2] = index;
-                    Grid[2,lineIndex2] = index;
+
+                    Grid[lineIndex, lineIndex2] = number.Next();
+                    
                 }
             }
         }
