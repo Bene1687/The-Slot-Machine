@@ -4,19 +4,12 @@
     {
         static void Main(string[] args)
         {
-            const int TOP_HORIZONTAL = 1;
-            const int MIDDLE_HORIZONTAL = 2;
-            const int BOTTOM_HORIZONTAL = 3;    
-            const int TOP_VERTICAL = 4; 
-            const int MIDDLE_VERTICAL = 5;
-            const int BOTTOM_VERTICAL = 6;
-            const int FIRST_DIAGONAL = 7;
-            const int SECOND_DIAGONAL = 8;
-            const int ALL_LINES = 9;
+            const int ALL_HORIZONTALS = 1;
+            const int ALL_VERTICALS = 2;
+            const int CENTER_LINE = 3;    
+            const int DIAGONALS = 4; 
             Random number = new Random();
             List<int> lines = new List<int>(3);
-            
-
             //Create a menu for the game
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
