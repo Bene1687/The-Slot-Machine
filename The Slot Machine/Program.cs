@@ -22,14 +22,14 @@
             Console.WriteLine();
             Console.WriteLine("Player decide which lines to play, £1 per line");
             Console.WriteLine();
-            Console.WriteLine("LINE OPTIONS : 1 = Top horizontal, 2 = Middle horizontal, 3 = Bottom horizontal, 4 = Top vertical, 5 = Middle vertical, 6 = Bottom vertical, 7 = First diagonal, 8 = Second diagonal, 9 = all lines");
+            Console.WriteLine("LINE OPTIONS : 1 = All horizontals, 2 = All verticals, 3 = Center line, 4 = diagonals");
             Console.WriteLine();
             int answer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("you entered : " + answer);
-            int[,] Grid = new int[3,3];
-            for (int lineIndex = 0; lineIndex < 3; lineIndex++)
+            int[,] Grid = new int[2,2];
+            for (int lineIndex = 0; lineIndex < 2; lineIndex++)
             {
-                for (int lineIndex2 = 0;lineIndex2 < 3; lineIndex2++)
+                for (int lineIndex2 = 0;lineIndex2 < 2; lineIndex2++)
                 {
 
                     Grid[lineIndex, lineIndex2] = number.Next();
