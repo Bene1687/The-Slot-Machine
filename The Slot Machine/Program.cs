@@ -19,10 +19,10 @@
             Console.WriteLine();
             int answer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("you entered : " + answer);
-            int[,] Grid = new int[2,2];
-            for (int lineIndex = 0; lineIndex < 2; lineIndex++)
+            int[,] Grid = new int[3,3];
+            for (int lineIndex = 0; lineIndex < 3; lineIndex++)
             {
-                for (int lineIndex2 = 0;lineIndex2 < 2; lineIndex2++)
+                for (int lineIndex2 = 0;lineIndex2 < 3; lineIndex2++)
                 {
 
                     Grid[lineIndex, lineIndex2] = number.Next();
