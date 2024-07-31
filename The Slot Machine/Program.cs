@@ -28,7 +28,7 @@
                 {
 
                     Grid[lineIndex, lineIndex2] = number.Next();
-                    
+                    Console.Write(Console.Read());
                 }
             }
         }
