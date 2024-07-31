@@ -8,6 +8,8 @@
             const int ALL_VERTICALS = 2;
             const int CENTER_LINE = 3;    
             const int DIAGONALS = 4; 
+            const int COLUMNS_HORIZONTALS = 3;
+            const int COLUMNS_VERTICALS = 3;
             Random number = new Random();
             List<int> lines = new List<int>(3);
             //Create a menu for the game
@@ -20,9 +22,9 @@
             int answer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("you entered : " + answer);
             int[,] Grid = new int[3,3];
-            for (int lineIndex = 0; lineIndex < 3; lineIndex++)
+            for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
             {
-                for (int lineIndex2 = 0;lineIndex2 < 3; lineIndex2++)
+                for (int lineIndex2 = 0;lineIndex2 < COLUMNS_VERTICALS; lineIndex2++)
                 {
 
                     Grid[lineIndex, lineIndex2] = number.Next();
