@@ -27,8 +27,8 @@
                 for (int lineIndex2 = 0;lineIndex2 < COLUMNS_VERTICALS; lineIndex2++)
                 {
 
-                    Grid[lineIndex, lineIndex2] = number.Next();
-                    Console.Write(Console.Read());
+                    Console.WriteLine(Grid[lineIndex, lineIndex2] = number.Next());
+                    
                 }
             }
         }
