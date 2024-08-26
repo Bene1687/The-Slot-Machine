@@ -28,7 +28,7 @@
                 {
 
                     Console.WriteLine(Grid[lineIndex, lineIndex2] = number.Next(1,3));
-                    if (LineIndex[0,0] == LineIndex2[0,1])
+                    if (Grid[LineIndex] == Grid[LineIndex2])
                     {
                         Console.WriteLine("Same value");
                     }
