@@ -22,13 +22,15 @@
             int answer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("you entered : " + answer);
             int[,] Grid = new int[3,3];
+            //int LineIndex = 0;
+            //int LineIndex2 = 0;
             for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
             {
-                for (int lineIndex2 = 0;lineIndex2 < COLUMNS_VERTICALS; lineIndex2++)
+                for (int columnIndex = 0;columnIndex  < COLUMNS_VERTICALS; columnIndex++)
                 {
 
-                    Console.WriteLine(Grid[lineIndex, lineIndex2] = number.Next(1,3));
-                    if (Grid[LineIndex] == Grid[LineIndex2])
+                    Console.WriteLine(Grid[lineIndex, columnIndex] = number.Next(1,3));
+                    if (Grid[lineIndex,0] == Grid[columnIndex,0])
                     {
                         Console.WriteLine("Same value");
                     }
