@@ -26,13 +26,17 @@
             //int LineIndex2 = 0;
             for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
             {
-                for (int columnIndex = 0;columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
                 {
 
-                    Console.WriteLine(Grid[lineIndex, columnIndex] = number.Next(1,3));
-                    if (Grid[lineIndex,0] == Grid[columnIndex,0])
+                    Console.WriteLine(Grid[lineIndex, columnIndex] = number.Next(1, 3));
+                    if ((Grid[lineIndex, 0] , Grid[columnIndex, 0]) == (Grid[lineIndex,0] , Grid[columnIndex,1]))
                     {
                         Console.WriteLine("Same value");
+                    }
+                    if ((Grid[lineIndex, 0] , Grid[columnIndex, 0]) == (Grid[lineIndex,0] , Grid[columnIndex,2]))
+                    {
+                        Console.WriteLine("You win");
                     }
                 }
             }
