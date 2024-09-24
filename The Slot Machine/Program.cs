@@ -11,7 +11,6 @@
             const int COLUMNS_HORIZONTALS = 3;
             const int COLUMNS_VERTICALS = 3;
             Random number = new Random();
-            List<int> lines = new List<int>(3);
             //Create a menu for the game
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
@@ -22,13 +21,10 @@
             int answer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("you entered : " + answer);
             int[,] Grid = new int[3,3];
-            //int LineIndex = 0;
-            //int LineIndex2 = 0;
             for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
             {
                 for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
                 {
-
                     Console.WriteLine(Grid[lineIndex, columnIndex] = number.Next(1, 3));
                     if ((Grid[lineIndex, 0] , Grid[columnIndex, 0]) == (Grid[lineIndex,0] , Grid[columnIndex,1]))
                     {
