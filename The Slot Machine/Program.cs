@@ -25,17 +25,35 @@
             {
                 for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
                 {
-                    Console.WriteLine(Grid[lineIndex, columnIndex] = number.Next(1, 3));
-                    if ((Grid[lineIndex, 0] , Grid[columnIndex, 0]) == (Grid[lineIndex,0] , Grid[columnIndex,1]))
+                    //first couple of loops
+                    Grid[lineIndex, columnIndex] = number.Next(1, 3);
+                    //another couple of lopops
+                    for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
                     {
-                        Console.WriteLine("Same value");
+                        for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                        {
+                            Console.WriteLine(Grid[lineIndex, columnIndex]);
+                        }
                     }
-                    if ((Grid[lineIndex, 0] , Grid[columnIndex, 0]) == (Grid[lineIndex,0] , Grid[columnIndex,2]))
+                    //another couple of loop
+                    for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
                     {
-                        Console.WriteLine("You win");
+                        for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                        {
+                            if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 1]))
+                            {
+                                Console.WriteLine("Same value");
+                            }
+                            if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 2]))
+                            {
+                                Console.WriteLine("You win");
+                            }
+                        }
                     }
                 }
             }
+
+
         }
     }//Design a game where the user can play a make believe slot machine
     //How do I want my slot machine to work?
