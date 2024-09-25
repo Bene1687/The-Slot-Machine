@@ -27,31 +27,32 @@
                 {
                     //first couple of loops
                     Grid[lineIndex, columnIndex] = number.Next(1, 3);
-                    //another couple of lopops
-                    for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
-                    {
-                        for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
-                        {
-                            Console.WriteLine(Grid[lineIndex, columnIndex]);
-                        }
-                    }
+                }
+            }  //another couple of lopops
+            for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
+            {
+                for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                {
+                   Console.WriteLine(Grid[lineIndex, columnIndex]);
+                }
+            }
                     //another couple of loop
-                    for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
+            for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
+            {
+                for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                {
+                    if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 1]))
                     {
-                        for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
-                        {
-                            if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 1]))
-                            {
-                                Console.WriteLine("Same value");
-                            }
-                            if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 2]))
-                            {
-                                Console.WriteLine("You win");
-                            }
-                        }
+                        Console.WriteLine("Same value");
+                    }
+                    if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 2]))
+                    {
+                        Console.WriteLine("You win");
                     }
                 }
             }
+                
+            
 
 
         }
