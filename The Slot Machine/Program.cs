@@ -34,40 +34,36 @@
             int[,] Grid = new int[3,3];
 
             //Fill the Grid with random number between 1 and 4
-            for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
+            for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
             {
-                for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    Grid[lineIndex, columnIndex] = number.Next(1,4);
+                    Grid[indexRow, indexColumn] = number.Next(1,4);
                 }
             }  
             //Print the content of the Grid
-            for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
+            for (int indexRow = 0; indexRow< COLUMNS_HORIZONTALS; indexRow++)
             {
-                for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                   Console.WriteLine(Grid[lineIndex, columnIndex]);
+                   Console.WriteLine(Grid[indexRow, indexColumn]);
                 }
             }
             //Check for wins
-            for (int lineIndex = 0; lineIndex < COLUMNS_HORIZONTALS; lineIndex++)
+            for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
             {
-                for (int columnIndex = 0; columnIndex  < COLUMNS_VERTICALS; columnIndex++)
+                for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 1]))
+                    if ((Grid[indexRow, 0], Grid[indexColumn, 0]) == (Grid[indexRow, 0], Grid[indexColumn, 1]))
                     {
                         Console.WriteLine("Same value");
                     }
-                    if ((Grid[lineIndex, 0], Grid[columnIndex, 0]) == (Grid[lineIndex, 0], Grid[columnIndex, 2]))
+                    if ((Grid[indexRow, 0], Grid[indexColumn, 0]) ==(Grid[indexRow, 0], Grid[indexColumn, 2]))
                     {
                         Console.WriteLine("You win");
                     }
                 }
             }
-                
-            
-
-
         }
     }
 }
