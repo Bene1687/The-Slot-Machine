@@ -20,6 +20,8 @@
             const int COLUMNS_HORIZONTALS = 3;
             const int COLUMNS_VERTICALS = 3;
             Random number = new Random();
+            const int LOWER_RANGE_RANDOM_NUM = 1;
+            const int HIGHER_RANGE_RANDOM_NUM = 4;
             
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
@@ -38,7 +40,7 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    Grid[indexRow, indexColumn] = number.Next(1,4);
+                    Grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
                 }
             }  
             //Print the content of the Grid
