@@ -40,6 +40,7 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
+                   //Grid[indexRow, indexColumn] = 1;
                     Grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
                 }
             }  
@@ -56,13 +57,35 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    if ((Grid[indexRow, 0], Grid[indexColumn, 0]) == (Grid[indexRow, 0], Grid[indexColumn, 1]))
+                    while (answer == ALL_HORIZONTALS)
                     {
-                        Console.WriteLine("Same value");
-                    }
-                    if ((Grid[indexRow, 0], Grid[indexColumn, 0]) ==(Grid[indexRow, 0], Grid[indexColumn, 2]))
-                    {
-                        Console.WriteLine("You win");
+
+                        if ((Grid[indexRow, 0], Grid[indexColumn, 0]) == (Grid[indexRow, 0], Grid[indexColumn, 1]))
+                        {
+                            Console.WriteLine("Same value");
+                        }
+                        if ((Grid[indexRow, 0], Grid[indexColumn, 0]) ==(Grid[indexRow, 0], Grid[indexColumn, 2]))
+                        {
+                            Console.WriteLine("You have first row");
+                        }
+                        if ((Grid[indexRow, 1], Grid[indexColumn, 0]) ==(Grid[indexRow, 1], Grid[indexColumn, 1]))
+                        {
+                            Console.WriteLine("Same value");
+                        }
+                        if ((Grid[indexRow, 1], Grid[indexColumn, 0]) == (Grid[indexRow, 1], Grid[indexColumn, 1]))
+                        {
+                            Console.WriteLine("You have second row");
+                        }
+                        if ((Grid[indexRow, 2], Grid[indexColumn, 0]) == (Grid[indexRow, 2], Grid[indexColumn, 1]))
+                        {
+                            Console.WriteLine("Same value");
+                        }
+                        if ((Grid[indexRow, 2], Grid[indexColumn, 0]) ==(Grid[indexRow, 2], Grid[indexColumn, 2]))
+                        {
+                            Console.WriteLine("You have the third row");
+                        }
+
+
                     }
                 }
             }
