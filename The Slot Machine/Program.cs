@@ -60,32 +60,10 @@
                     while (answer == ALL_HORIZONTALS)
                     {
 
-                        if ((Grid[indexRow, 0], Grid[indexColumn, 0]) == (Grid[indexRow, 0], Grid[indexColumn, 1]))
+                        if (indexRow == indexColumn)
                         {
-                            Console.WriteLine("Same value");
+                            Console.WriteLine("You win");
                         }
-                        if ((Grid[indexRow, 0], Grid[indexColumn, 0]) ==(Grid[indexRow, 0], Grid[indexColumn, 2]))
-                        {
-                            Console.WriteLine("You have first row");
-                        }
-                        if ((Grid[indexRow, 1], Grid[indexColumn, 0]) ==(Grid[indexRow, 1], Grid[indexColumn, 1]))
-                        {
-                            Console.WriteLine("Same value");
-                        }
-                        if ((Grid[indexRow, 1], Grid[indexColumn, 0]) == (Grid[indexRow, 1], Grid[indexColumn, 1]))
-                        {
-                            Console.WriteLine("You have second row");
-                        }
-                        if ((Grid[indexRow, 2], Grid[indexColumn, 0]) == (Grid[indexRow, 2], Grid[indexColumn, 1]))
-                        {
-                            Console.WriteLine("Same value");
-                        }
-                        if ((Grid[indexRow, 2], Grid[indexColumn, 0]) ==(Grid[indexRow, 2], Grid[indexColumn, 2]))
-                        {
-                            Console.WriteLine("You have the third row");
-                        }
-
-
                     }
                 }
             }
