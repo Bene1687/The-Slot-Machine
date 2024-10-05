@@ -60,7 +60,7 @@
                     while (answer == ALL_HORIZONTALS)
                     {
 
-                        if (indexRow == indexColumn)
+                        if ((Grid [indexRow,LOWER_RANGE_RANDOM_NUM], Grid[indexColumn,LOWER_RANGE_RANDOM_NUM]) == (Grid [indexRow,HIGHER_RANGE_RANDOM_NUM],Grid[indexColumn,HIGHER_RANGE_RANDOM_NUM]))
                         {
                             Console.WriteLine("You win");
                         }
