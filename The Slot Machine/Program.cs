@@ -57,14 +57,14 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    while (answer == ALL_HORIZONTALS)
-                    {
+                   if (answer == ALL_HORIZONTALS)
+                   {
 
-                        if ((Grid [indexRow,LOWER_RANGE_RANDOM_NUM], Grid[indexColumn,LOWER_RANGE_RANDOM_NUM]) == (Grid [indexRow,HIGHER_RANGE_RANDOM_NUM],Grid[indexColumn,HIGHER_RANGE_RANDOM_NUM]))
+                        if ((Grid [indexRow,indexColumn ++], Grid[indexColumn,indexRow ++]) == (Grid [indexRow,indexColumn ++],Grid[indexColumn,indexRow ++]))
                         {
                             Console.WriteLine("You win");
                         }
-                    }
+                   }
                 }
             }
         }
