@@ -57,14 +57,27 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                   if (answer == ALL_HORIZONTALS)
-                   {
+                    if (answer == ALL_HORIZONTALS)
+                    {
 
-                        if ((Grid [indexRow,indexColumn ++], Grid[indexColumn,indexRow ++]) == (Grid [indexRow,indexColumn ++],Grid[indexColumn,indexRow ++]))
+                        if ((Grid[indexRow, indexColumn++], Grid[indexColumn, indexRow++]) == (Grid[indexRow, indexColumn++], Grid[indexColumn, indexRow++]))
                         {
                             Console.WriteLine("You win");
                         }
-                   }
+                    }
+                    if (answer == ALL_VERTICALS)
+                    {
+
+
+                    }
+                    if (answer == CENTER_LINE)
+                    {
+
+                    }
+                    if (answer == DIAGONALS)
+                    {
+
+                    }
                 }
             }
         }
