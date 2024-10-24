@@ -53,6 +53,15 @@
                 }
             }
             //Check for wins
+            // 1 0 1 
+            // 1 1 1 
+            // 0 1 0 
+
+            //Grid[0,0] == Grid[0,1] 
+            //Grid[0,0] == Grid[0,2]
+            //Grid[0,0] == Grid[0,indexColumn]
+            //Grid[0,0] == Grid[0,indexColumn]
+
             for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
@@ -60,10 +69,32 @@
                     if (answer == ALL_HORIZONTALS)
                     {
 
-                        if ((Grid[indexRow, indexColumn++], Grid[indexColumn, indexRow++]) == (Grid[indexRow, indexColumn++], Grid[indexColumn, indexRow++]))
+                        if (Grid[0, 0] == Grid[0, indexColumn])
                         {
                             Console.WriteLine("You win");
                         }
+                        else
+                        {
+                            Console.WriteLine("No win");
+                        }
+                        if (Grid[1, 0] == Grid[1, indexColumn])
+                        {
+                            Console.WriteLine("You win");
+                        }
+                        else 
+                        {
+                            Console.WriteLine("No win");
+                        }
+                        if (Grid[2,0] == Grid[2, indexColumn])
+                        {
+                            Console.WriteLine("You win");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No win");
+                        }
+
+
                     }
                     if (answer == ALL_VERTICALS)
                     {
