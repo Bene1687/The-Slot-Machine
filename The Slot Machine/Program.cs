@@ -69,31 +69,14 @@
                     if (answer == ALL_HORIZONTALS)
                     {
 
-                        if (Grid[0, 0] == Grid[0, indexColumn])
-                        {
-                            Console.WriteLine("You win");
-                        }
-                        else
+                        if (Grid[indexRow, 0] != Grid[indexRow, indexColumn])
                         {
                             Console.WriteLine("No win");
-                        }
-                        if (Grid[1, 0] == Grid[1, indexColumn])
-                        {
-                            Console.WriteLine("You win");
                         }
                         else 
-                        {
-                            Console.WriteLine("No win");
-                        }
-                        if (Grid[2,0] == Grid[2, indexColumn])
-                        {
+                        { 
                             Console.WriteLine("You win");
                         }
-                        else
-                        {
-                            Console.WriteLine("No win");
-                        }
-
 
                     }
                     if (answer == ALL_VERTICALS)
