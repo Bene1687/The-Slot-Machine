@@ -61,7 +61,7 @@
             //Grid[0,0] == Grid[0,2]
             //Grid[0,0] == Grid[0,indexColumn]
             //Grid[0,0] == Grid[0,indexColumn]
-
+            bool hasTheSameNum = true;
             for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
