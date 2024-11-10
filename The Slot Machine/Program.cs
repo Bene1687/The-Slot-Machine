@@ -79,16 +79,33 @@
                     }
                     if (answer == ALL_VERTICALS)
                     {
+                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                        {
+                             for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                             { 
 
-
+                             }
+                        }
                     }
                     if (answer == CENTER_LINE)
                     {
+                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                        {
+                            for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                            {
 
+                            }
+                        }
                     }
                     if (answer == DIAGONALS)
                     {
+                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                        {
+                            for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                            {
 
+                            }
+                        }
                     }
                 
             
