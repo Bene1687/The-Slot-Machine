@@ -62,6 +62,7 @@
             //Grid[0,0] == Grid[0,indexColumn]
             //Grid[0,0] == Grid[0,indexColumn]
            
+                    bool win = true;
                     if (answer == ALL_HORIZONTALS)
                     {
                         for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
@@ -70,11 +71,15 @@
                             {
                                 if (Grid[indexRow, 0] != Grid[indexRow, indexColumn])
                                 {
-                                    Console.WriteLine("No win");
+                                    win = false; 
+                                    break;
                                 }
                                 else
                                 {
-                            }   }    
+                                    win &= true;
+                                    Console.WriteLine("Congratulations, YOU WIN!");
+                                }
+                            }       
                         }  
                     }
                     if (answer == ALL_VERTICALS)
