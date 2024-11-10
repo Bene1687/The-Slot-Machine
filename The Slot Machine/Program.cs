@@ -61,24 +61,21 @@
             //Grid[0,0] == Grid[0,2]
             //Grid[0,0] == Grid[0,indexColumn]
             //Grid[0,0] == Grid[0,indexColumn]
-           int winningNumber = 0;
-            for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
-            {
-                for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
-                {
+           
                     if (answer == ALL_HORIZONTALS)
                     {
-
-                        if (Grid[indexRow, 0] != Grid[indexRow, indexColumn])
+                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                         {
-                            Console.WriteLine("No win");
-                        }
-                        else 
-                        {
-
-                            winningNumber = 2*;
-                        }
-
+                            for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                            {
+                                if (Grid[indexRow, 0] != Grid[indexRow, indexColumn])
+                                {
+                                    Console.WriteLine("No win");
+                                }
+                                else
+                                {
+                            }   }    
+                        }  
                     }
                     if (answer == ALL_VERTICALS)
                     {
@@ -93,8 +90,8 @@
                     {
 
                     }
-                }
-            }
+                
+            
         }
     }
 }
