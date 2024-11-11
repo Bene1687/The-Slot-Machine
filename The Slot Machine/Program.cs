@@ -69,19 +69,29 @@
                         {
                             for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                             {
-                                if (Grid[indexRow, 0] != Grid[indexRow, indexColumn])
-                                {
-                                    win = false; 
-                                    break;
-                                }
-                                else
-                                {
-                                    win &= true;
-                                    Console.WriteLine("Congratulations, YOU WIN!");
-                                }
+                                
                             }       
-                        }  
+                        }
+                        if (Grid[indexRow, 0] != Grid[indexRow, indexColumn])
+                        {
+                            win = false;
+                            break;
+                        }
+                        else
+                        {
+                            win &= true;
+                            Console.WriteLine("Congratulations, YOU WIN!");
+                        }
+
+
+
+
+
+
+
+
                     }
+
                     if (answer == ALL_VERTICALS)
                     {
                         for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
