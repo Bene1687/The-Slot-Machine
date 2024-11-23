@@ -33,7 +33,7 @@
             int answer = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("you entered : " + answer);
-            int[,] Grid = new int[3,3];
+            int[,] grid = new int[3,3];
 
             //Fill the Grid with random number between 1 and 4
             for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
@@ -41,7 +41,7 @@
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
                    //Grid[indexRow, indexColumn] = 1;
-                    Grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
+                    grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
                 }
             }  
             //Print the content of the Grid
@@ -49,7 +49,7 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                   Console.WriteLine(Grid[indexRow, indexColumn]);
+                   Console.WriteLine(grid[indexRow, indexColumn]);
                 }
             }
             //Check for wins
@@ -69,29 +69,20 @@
                         {
                             for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                             {
-                                
+                                if (grid[indexRow, 0] != grid[indexRow, indexColumn])
+                                {
+                                    win = false;
+                                    break;
+                                }
+                               // else
+                                //{
+                                   // win &= true;
+                                   // Console.WriteLine("Congratulations, YOU WIN!");
+                                //}
                             }       
                         }
-                        if (Grid[indexRow, 0] != Grid[indexRow, indexColumn])
-                        {
-                            win = false;
-                            break;
-                        }
-                        else
-                        {
-                            win &= true;
-                            Console.WriteLine("Congratulations, YOU WIN!");
-                        }
-
-
-
-
-
-
-
-
+                        Console.WriteLine($"You {win}");
                     }
-
                     if (answer == ALL_VERTICALS)
                     {
                         for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
