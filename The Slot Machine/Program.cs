@@ -55,15 +55,6 @@
                 }
             }
             //Check for wins
-            // 1 0 1 
-            // 1 1 1 
-            // 0 1 0 
-
-            //Grid[0,0] == Grid[0,1] 
-            //Grid[0,0] == Grid[0,2]
-            //Grid[0,0] == Grid[0,indexColumn]
-            //Grid[0,0] == Grid[0,indexColumn]
-           
                     bool win = true;
                     if (answer == ALL_HORIZONTALS)
                     {
@@ -71,16 +62,15 @@
                         {
                             for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                             {
-                                if (grid[indexRow, 0] != grid[indexRow, indexColumn])
+                                if (grid[indexRow, 0] == grid[indexRow, indexColumn])
                                 {
-                                    win = false;
+                                    win = true;
+                                }
+                                else
+                                {
+                                   win = false;
                                     break;
                                 }
-                               // else
-                                //{
-                                   // win &= true;
-                                   // Console.WriteLine("Congratulations, YOU WIN!");
-                                //}
                             }       
                         }
                         Console.WriteLine($"You {win}");
