@@ -22,6 +22,8 @@
             Random number = new Random();
             const int LOWER_RANGE_RANDOM_NUM = 1;
             const int HIGHER_RANGE_RANDOM_NUM = 4;
+            const int ROW_SIZE = 3;
+            const int COLUMN_SIZE = 3;
             
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
@@ -33,7 +35,7 @@
             int answer = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("you entered : " + answer);
-            int[,] grid = new int[3,3];
+            int[,] grid = new int[ROW_SIZE,COLUMN_SIZE];
 
             //Fill the Grid with random number between 1 and 4
             for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
