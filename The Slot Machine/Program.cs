@@ -55,59 +55,55 @@
                 }
             }
             //Check for wins
-                    bool win = true;
-                    if (answer == ALL_HORIZONTALS)
+                    bool win = false;
+            if (answer == ALL_HORIZONTALS)
+            {
+                for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                {
+                    for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                        if (grid[indexRow, 0] != grid[indexRow, indexColumn])
                         {
-                            for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
-                            {
-                                if (grid[indexRow, 0] == grid[indexRow, indexColumn])
-                                {
-                                    win = true;
-                                }
-                                else
-                                {
-                                   win = false;
-                                    break;
-                                }
-                            }       
+                            win = false;
+                            break;
                         }
-                        if (win = true)
-                            Console.WriteLine("You win");
                     }
-                    if (answer == ALL_VERTICALS)
-                    {
-                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
-                        {
-                             for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
-                             { 
+                }
+                if (win = true)
+                {
+                    Console.WriteLine("You win");
+                } 
+            } 
+            if (answer == ALL_VERTICALS)
+            {
+                for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                {
+                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                     { 
 
-                             }
-                        }
-                    }
-                    if (answer == CENTER_LINE)
+                     }
+                }
+            }
+            if (answer == CENTER_LINE)
+            {
+                for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                {
+                    for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
-                        {
-                            for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
-                            {
 
-                            }
-                        }
                     }
-                    if (answer == DIAGONALS)
+                }
+            }
+            if (answer == DIAGONALS)
+            {
+                for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                {
+                    for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
-                        {
-                            for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
-                            {
 
-                            }
-                        }
                     }
-                
-            
+                }
+            }
         }
     }
 }
