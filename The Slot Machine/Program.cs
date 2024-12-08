@@ -66,13 +66,15 @@
                         {
                             win = false;
                             break;
+                            win = true;
+                            Console.WriteLine("You win");
                         }
                     }
                 }
-                if (win = true)
-                {
-                    Console.WriteLine("You win");
-                } 
+                //if (win = true)
+                //{
+                //    Console.WriteLine("You win");
+                //} 
             } 
             if (answer == ALL_VERTICALS)
             {
