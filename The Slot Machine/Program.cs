@@ -64,7 +64,7 @@
                     {
                         if (grid[indexRow, 0] != grid[indexRow, indexColumn])
                         {
-                            win = false;
+                            win &= false;
                             break;
                         }
                     }
@@ -119,8 +119,16 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-
+                        if ((grid[0,0] != grid[1, 1]) & (grid[2,0] != grid[1,1]))   
+                        {
+                            win &= false;
+                            break;
+                        }
                     }
+                }
+                if (win == true)
+                {
+                    Console.WriteLine("YOU WIN");
                 }
             }
         }
