@@ -69,7 +69,7 @@
                         }
                     }
                 }
-                if (win = true)
+                if (win == true)
                 {
                     Console.WriteLine("You win");
                 } 
