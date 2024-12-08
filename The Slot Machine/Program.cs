@@ -42,7 +42,7 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                 // grid[indexRow, indexColumn] = 1;
+                  //grid[indexRow, indexColumn] = 1;
                     grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
                 }
             }  
@@ -85,7 +85,6 @@
                             win &= false;
                             break;
                         }
-
                      }
                 }
                 if (win == true)
@@ -93,15 +92,25 @@
                     Console.WriteLine("YOU WIN");
                 }
             }
+            //123
+            //321
+            //213
             if (answer == CENTER_LINE)
             {
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        
-
+                        if (grid[1,0] != grid[1, 1])
+                        {
+                            win &= false;
+                            break;
+                        }
                     }
+                }
+                if (win == true)
+                {
+                    Console.WriteLine("YOU WIN");
                 }
             }
             if (answer == DIAGONALS)
