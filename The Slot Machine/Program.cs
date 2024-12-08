@@ -42,8 +42,8 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                  grid[indexRow, indexColumn] = 1;
-                    //grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
+                  //grid[indexRow, indexColumn] = 1;
+                    grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
                 }
             }  
             //Print the content of the Grid
@@ -55,7 +55,7 @@
                 }
             }
             //Check for wins
-                    bool win = false;
+                    bool win = true;
             if (answer == ALL_HORIZONTALS)
             {
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
@@ -64,17 +64,15 @@
                     {
                         if (grid[indexRow, 0] != grid[indexRow, indexColumn])
                         {
-                            win = true;
-                            Console.WriteLine("You win");
                             win = false;
                             break;
                         }
                     }
                 }
-                //if (win = true)
-                //{
-                //    Console.WriteLine("You win");
-                //} 
+                if (win = true)
+                {
+                    Console.WriteLine("You win");
+                } 
             } 
             if (answer == ALL_VERTICALS)
             {
