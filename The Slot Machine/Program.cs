@@ -42,7 +42,7 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                  //grid[indexRow, indexColumn] = 1;
+                 // grid[indexRow, indexColumn] = 1;
                     grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
                 }
             }  
@@ -80,8 +80,17 @@
                 {
                      for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                      { 
+                        if (grid[indexColumn,0] != grid[indexColumn, indexRow])
+                        {
+                            win &= false;
+                            break;
+                        }
 
                      }
+                }
+                if (win == true)
+                {
+                    Console.WriteLine("YOU WIN");
                 }
             }
             if (answer == CENTER_LINE)
@@ -90,6 +99,7 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
+                        
 
                     }
                 }
