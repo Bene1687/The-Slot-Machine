@@ -64,7 +64,7 @@
                     {
                         if (grid[indexRow, 0] != grid[indexRow, indexColumn])
                         {
-                            win &= false;
+                            win = false;
                             break;
                         }
                     }
@@ -82,7 +82,7 @@
                      { 
                         if (grid[indexColumn,0] != grid[indexColumn, indexRow])
                         {
-                            win &= false;
+                            win = false;
                             break;
                         }
                      }
@@ -103,7 +103,7 @@
                     {
                         if (grid[1,0] != grid[1, 1])
                         {
-                            win &= false;
+                            win = false;
                             break;
                         }
                     }
@@ -119,9 +119,9 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        if ((grid[0,0] != grid[1, 1]) & (grid[2,0] != grid[1,1]))   
+                        if ((grid[0,0] != grid[1, 1]) & (grid[indexColumn,0] != grid[indexColumn,1]))   
                         {
-                            win &= false;
+                            win = false;
                             break;
                         }
                     }
