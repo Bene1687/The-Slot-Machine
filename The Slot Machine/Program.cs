@@ -119,7 +119,7 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        if ((grid[0,0] != grid[1, 1]) & (grid[indexColumn,0] != grid[indexColumn,1]))   
+                        if (grid[indexRow,indexRow] != grid[indexColumn, indexColumn])   
                         {
                             win = false;
                             break;
