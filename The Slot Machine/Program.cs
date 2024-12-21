@@ -124,6 +124,11 @@
                             win = false;
                             break;
                         }
+                        if (grid[indexRow, indexRow] != grid[indexColumn, 0])
+                        {
+                            win = false;
+                            break;
+                        }
                     }
                 }
                 if (win)
