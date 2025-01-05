@@ -69,7 +69,7 @@
                         }
                     }
                 }
-                if (win)
+                if (!win)
                 {
                     Console.WriteLine("You win");
                 } 
@@ -87,7 +87,7 @@
                         }
                      }
                 }
-                if (win)
+                if (!win)
                 {
                     Console.WriteLine("YOU WIN");
                 }
@@ -108,7 +108,7 @@
                         }
                     }
                 }
-                if (win)
+                if (!win)
                 {
                     Console.WriteLine("YOU WIN");
                 }
@@ -131,7 +131,7 @@
                         }
                     }
                 }
-                if (win)
+                if (!win)
                 {
                     Console.WriteLine("YOU WIN");
                 }
