@@ -52,6 +52,8 @@
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
                    Console.WriteLine(grid[indexRow, indexColumn]);
+                    Console.Write(indexRow);
+                    Console.Write(indexColumn);
                 }
             }
             //Check for wins
