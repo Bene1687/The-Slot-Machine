@@ -49,11 +49,11 @@
             //Print the content of the Grid
             for (int indexRow = 0; indexRow< COLUMNS_HORIZONTALS; indexRow++)
             {
+                Console.WriteLine();
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                   Console.WriteLine(grid[indexRow, indexColumn]);
-                    Console.Write(indexRow);
-                    Console.Write(indexColumn);
+                    Console.Write(grid[indexRow, indexColumn]);
+                    
                 }
             }
             //Check for wins
