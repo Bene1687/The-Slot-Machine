@@ -24,6 +24,7 @@
             const int HIGHER_RANGE_RANDOM_NUM = 4;
             const int ROW_SIZE = 3;
             const int COLUMN_SIZE = 3;
+            const int DIVIDING_TO_GET_CENTRE = 2;
             
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
@@ -73,7 +74,8 @@
                 }
                 if (!win)
                 {
-                    Console.WriteLine("You win");
+                    Console.WriteLine();
+                    Console.Write("You win");
                 } 
             } 
             if (answer == ALL_VERTICALS)
@@ -91,7 +93,8 @@
                 }
                 if (!win)
                 {
-                    Console.WriteLine("YOU WIN");
+                    Console.WriteLine();
+                    Console.Write("YOU WIN");
                 }
             }
             //123
@@ -99,11 +102,13 @@
             //213
             if (answer == CENTER_LINE)
             {
+                int CentreOfTheGrid = HIGHER_RANGE_RANDOM_NUM*DIVIDING_TO_GET_CENTRE;
+
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        if (grid[1,0] != grid[1, 1])
+                        if (grid[CentreOfTheGrid,0] != grid[CentreOfTheGrid,1])
                         {
                             win = false;
                             break;
@@ -112,7 +117,8 @@
                 }
                 if (!win)
                 {
-                    Console.WriteLine("YOU WIN");
+                    Console.WriteLine();
+                    Console.Write("YOU WIN");
                 }
             }
             if (answer == DIAGONALS)
@@ -135,7 +141,8 @@
                 }
                 if (!win)
                 {
-                    Console.WriteLine("YOU WIN");
+                    Console.WriteLine();
+                    Console.Write("YOU WIN");
                 }
             }
         }
