@@ -108,7 +108,7 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        if (grid[CentreOfTheGrid,0] != grid[CentreOfTheGrid,1])
+                        if (grid[CentreOfTheGrid,0] != grid[CentreOfTheGrid,indexRow])
                         {
                             win = false;
                             break;
