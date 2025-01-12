@@ -102,7 +102,7 @@
             //213
             if (answer == CENTER_LINE)
             {
-                int CentreOfTheGrid = HIGHER_RANGE_RANDOM_NUM*DIVIDING_TO_GET_CENTRE;
+                int CentreOfTheGrid = ROW_SIZE*DIVIDING_TO_GET_CENTRE;
 
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
