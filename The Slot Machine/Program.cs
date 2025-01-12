@@ -115,7 +115,7 @@
                         }
                     }
                 }
-                if (!win)
+                if (win)
                 {
                     Console.WriteLine();
                     Console.Write("YOU WIN");
