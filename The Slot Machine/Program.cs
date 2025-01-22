@@ -15,8 +15,8 @@
          //Create a menu for the game
             const int ALL_HORIZONTALS = 1;
             const int ALL_VERTICALS = 2;
-            const int CENTER_LINE = 3;    
-            const int DIAGONALS = 4; 
+            const int CENTER_LINE = 3;
+            const int DIAGONALS = 4;
             const int COLUMNS_HORIZONTALS = 3;
             const int COLUMNS_VERTICALS = 3;
             Random number = new Random();
@@ -25,7 +25,7 @@
             const int ROW_SIZE = 3;
             const int COLUMN_SIZE = 3;
             const int DIVIDING_TO_GET_CENTRE = 2;
-            
+
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
             Console.WriteLine("Player decide which lines to play, £1 per line");
@@ -36,17 +36,17 @@
             int answer = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("you entered : " + answer);
-            int[,] grid = new int[ROW_SIZE,COLUMN_SIZE];
+            int[,] grid = new int[ROW_SIZE, COLUMN_SIZE];
 
             //Fill the Grid with random number between 1 and 4
             for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                  //grid[indexRow, indexColumn] = 1;
-                    grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM,HIGHER_RANGE_RANDOM_NUM);
+                    //grid[indexRow, indexColumn] = 1;
+                    grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM, HIGHER_RANGE_RANDOM_NUM);
                 }
-            }  
+            }
             //Print the content of the Grid
             for (int indexRow = 0; indexRow< COLUMNS_HORIZONTALS; indexRow++)
             {
@@ -54,11 +54,11 @@
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
                     Console.Write(grid[indexRow, indexColumn]);
-                    
+
                 }
             }
             //Check for wins
-                    bool win = true;
+            bool win = true;
             if (answer == ALL_HORIZONTALS)
             {
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
@@ -76,20 +76,20 @@
                 {
                     Console.WriteLine();
                     Console.Write("You win");
-                } 
-            } 
+                }
+            }
             if (answer == ALL_VERTICALS)
             {
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
-                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
-                     { 
-                        if (grid[indexColumn,0] != grid[indexColumn, indexRow])
+                    for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                    {
+                        if (grid[indexColumn, 0] != grid[indexColumn, indexRow])
                         {
                             win = false;
                             break;
                         }
-                     }
+                    }
                 }
                 if (win)
                 {
@@ -108,7 +108,7 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        if (grid[CentreOfTheGrid,0] != grid[CentreOfTheGrid,indexRow])
+                        if (grid[CentreOfTheGrid, 0] != grid[CentreOfTheGrid, indexRow])
                         {
                             win = false;
                             break;
@@ -127,12 +127,22 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        if (grid[0,0] != grid[indexColumn, indexColumn])   
+                        if (grid[0, 0] != grid[indexColumn, indexColumn])
                         {
                             win = false;
                             break;
                         }
                         if (grid[indexRow, indexRow] != grid[indexColumn, 0])
+                        {
+                            win = false;
+                            break;
+                        }
+                        if (grid[0, 2] != grid[indexColumn, indexColumn])
+                        {
+                            win = false;
+                            break;
+                        }
+                        if (grid[indexRow, indexRow] != grid[indexColumn, 2])
                         {
                             win = false;
                             break;
