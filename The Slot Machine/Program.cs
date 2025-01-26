@@ -63,7 +63,7 @@
             {
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
-                    for (int indexColumn = COLUMN_SIZE-1-indexRow; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                    for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
                         if (grid[indexRow, 0] != grid[indexRow, indexColumn])
                         {
@@ -137,7 +137,6 @@
                             win = false;
                             break;
                         }
-                        if 
                     }
                 }
                 if (win)
