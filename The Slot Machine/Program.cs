@@ -137,6 +137,10 @@
                             win = false;
                             break;
                         }
+                        if (indexColumn == COLUMN_SIZE-1-indexRow)
+                        {
+
+                        }
                     }
                 }
                 if (win)
