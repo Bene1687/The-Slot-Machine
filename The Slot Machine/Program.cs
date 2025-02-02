@@ -137,9 +137,10 @@
                             win = false;
                             break;
                         }
-                        if (indexColumn == COLUMN_SIZE-1-indexRow)
+                        if (grid[indexColumn = COLUMN_SIZE-1-indexRow,0] != grid[indexColumn , indexColumn])
                         {
-
+                            win = false;
+                            break;
                         }
                     }
                 }
