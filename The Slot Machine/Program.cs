@@ -43,8 +43,8 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    grid[indexRow, indexColumn] = 1;
-                    //grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM, HIGHER_RANGE_RANDOM_NUM);
+                    //grid[indexRow, indexColumn] = 1;
+                    grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM, HIGHER_RANGE_RANDOM_NUM);
                 }
             }
             //Print the content of the Grid
@@ -137,7 +137,7 @@
                             win = false;
                             break;
                         }
-                        if (grid[indexColumn = COLUMN_SIZE-1-indexRow,indexRow] != grid[indexColumn,1])
+                        if (grid[indexRow, COLUMN_SIZE-1-indexRow] != grid[indexColumn,1])
                         {
                             win = false;
                             break;
