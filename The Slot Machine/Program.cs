@@ -72,11 +72,6 @@
                         }
                     }
                 }
-                if (win)
-                {
-                    Console.WriteLine();
-                    Console.Write("You win");
-                }
             }
             if (answer == ALL_VERTICALS)
             {
@@ -90,11 +85,6 @@
                             break;
                         }
                     }
-                }
-                if (win)
-                {
-                    Console.WriteLine();
-                    Console.Write("YOU WIN");
                 }
             }
             //123
@@ -114,11 +104,6 @@
                             break;
                         }
                     }
-                }
-                if (win)
-                {
-                    Console.WriteLine();
-                    Console.Write("YOU WIN");
                 }
             }
             if (answer == DIAGONALS)
@@ -144,11 +129,11 @@
                         }
                     }
                 }
-                if (win)
-                {
-                    Console.WriteLine();
-                    Console.Write("YOU WIN");
-                }
+            }
+            if (win)
+            {
+                Console.WriteLine();
+                Console.Write("YOU WIN");
             }
         }
     }
