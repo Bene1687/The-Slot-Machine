@@ -112,17 +112,23 @@
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
+                        bool sameNumbers = false;
                         if (grid[0, 0] != grid[indexColumn, indexColumn])
                         {
-                            win = false;
+                            sameNumbers = false;
                             break;
                         }
                         if (grid[indexRow, indexRow] != grid[indexColumn, 0])
                         {
-                            win = false;
+                            sameNumbers = false;
                             break;
                         }
                         if (grid[indexRow, COLUMN_SIZE-1-indexRow] != grid[indexColumn,1])
+                        {
+                            sameNumbers = false;
+                            break;
+                        }
+                        if (sameNumbers)
                         {
                             win = false;
                             break;
