@@ -108,30 +108,44 @@
             }
             if (answer == DIAGONALS)
             {
+                bool winFirstDiagonal = true;
+                bool winSecondDiagonal = true;
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                        bool sameNumbers = false;
+                       
                         if (grid[0, 0] != grid[indexColumn, indexColumn])
                         {
-                            sameNumbers = false;
+                            winFirstDiagonal = false;
                             break;
                         }
                         if (grid[indexRow, indexRow] != grid[indexColumn, 0])
                         {
-                            sameNumbers = false;
+                            winFirstDiagonal = false;
                             break;
                         }
-                        if (grid[indexRow, COLUMN_SIZE-1-indexRow] != grid[indexColumn,1])
+                        if (winFirstDiagonal)
                         {
-                            sameNumbers = false;
+                            Console.WriteLine();
+                            Console.Write("Same numbers for the first diagonal");
+                        }
+                         
+                    }
+                }
+                for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
+                {
+                    for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
+                    {
+                        if (grid[indexRow, COLUMN_SIZE-1-indexRow] != grid[indexColumn, 1])
+                        {
+                            winSecondDiagonal = false;
                             break;
                         }
-                        if (sameNumbers)
+                        if (winSecondDiagonal)
                         {
-                            win = false;
-                            break;
+                            Console.WriteLine();
+                            Console.Write("Same numbers for the second diagonal");
                         }
                     }
                 }
