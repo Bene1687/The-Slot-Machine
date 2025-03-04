@@ -106,15 +106,22 @@
                     }
                 }
             }
+           
+            if (win)
+            {
+                Console.WriteLine();
+                Console.Write("YOU WIN");
+            }
+            bool winFirstDiagonal = true;
+            bool winSecondDiagonal = true;
             if (answer == DIAGONALS)
             {
-                bool winFirstDiagonal = true;
-                bool winSecondDiagonal = true;
+                
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                     {
-                       
+
                         if (grid[0, 0] != grid[indexColumn, indexColumn])
                         {
                             winFirstDiagonal = false;
@@ -125,12 +132,6 @@
                             winFirstDiagonal = false;
                             break;
                         }
-                        if (winFirstDiagonal)
-                        {
-                            Console.WriteLine();
-                            Console.Write("Same numbers for the first diagonal");
-                        }
-                         
                     }
                 }
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
@@ -142,18 +143,18 @@
                             winSecondDiagonal = false;
                             break;
                         }
-                        if (winSecondDiagonal)
-                        {
-                            Console.WriteLine();
-                            Console.Write("Same numbers for the second diagonal");
-                        }
                     }
                 }
             }
-            if (win)
+            if (winFirstDiagonal)
             {
                 Console.WriteLine();
-                Console.Write("YOU WIN");
+                Console.Write("Same numbers for the first diagonal");
+            }
+            if (winSecondDiagonal)
+            {
+                Console.WriteLine();
+                Console.Write("Same numbers for the second diagonal");
             }
         }
     }
