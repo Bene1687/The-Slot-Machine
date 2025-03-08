@@ -106,17 +106,12 @@
                     }
                 }
             }
-           
-            if (win)
-            {
-                Console.WriteLine();
-                Console.Write("YOU WIN");
-            }
+            
+
             bool winFirstDiagonal = true;
             bool winSecondDiagonal = true;
             if (answer == DIAGONALS)
             {
-                
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
@@ -132,8 +127,10 @@
                             winFirstDiagonal = false;
                             break;
                         }
+                        //
                     }
                 }
+               
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
@@ -145,17 +142,20 @@
                         }
                     }
                 }
+                 //&& AND
+                if (winFirstDiagonal && winSecondDiagonal)
+                {
+                    win = true;
+                }
             }
-            if (winFirstDiagonal)
+
+            if (win)
             {
                 Console.WriteLine();
-                Console.Write("Same numbers for the first diagonal");
+                Console.Write("YOU WIN");
             }
-            if (winSecondDiagonal)
-            {
-                Console.WriteLine();
-                Console.Write("Same numbers for the second diagonal");
-            }
+
+
         }
     }
 }
