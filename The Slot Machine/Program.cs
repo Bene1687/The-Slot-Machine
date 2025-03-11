@@ -143,9 +143,9 @@
                     }
                 }
                  //&& AND
-                if (winFirstDiagonal && winSecondDiagonal)
+                if (!winFirstDiagonal &&!winSecondDiagonal)
                 {
-                    win = true;
+                    win = false;
                 }
             }
 
