@@ -157,6 +157,7 @@
             {
                 Console.WriteLine();
                 Console.Write("YOU WIN");
+                int betMultiplying = bet * win;
             }
 
 
