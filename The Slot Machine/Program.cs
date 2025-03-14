@@ -30,6 +30,10 @@
             Console.WriteLine();
             Console.WriteLine("Player decide which lines to play, £1 per line");
             Console.WriteLine();
+            //Create a bet for the user
+            Console.WriteLine("Choose how much you want to bet in £ : ");
+            Console.WriteLine();
+            int bet = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("LINE OPTIONS : 1 = All horizontals, 2 = All verticals, 3 = Center line, 4 = diagonals");
             Console.WriteLine();
 
