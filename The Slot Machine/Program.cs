@@ -25,6 +25,7 @@
             const int ROW_SIZE = 3;
             const int COLUMN_SIZE = 3;
             const int DIVIDING_TO_GET_CENTRE = 2;
+            const int WINS = 2;
 
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
@@ -157,7 +158,7 @@
             {
                 Console.WriteLine();
                 Console.Write("YOU WIN");
-                int betMultiplying = bet * win;
+                int betMultiplying = bet * WINS;
             }
 
 
