@@ -111,8 +111,6 @@
                     }
                 }
             }
-            
-
             bool winFirstDiagonal = true;
             bool winSecondDiagonal = true;
             if (answer == DIAGONALS)
@@ -132,10 +130,8 @@
                             winFirstDiagonal = false;
                             break;
                         }
-                        //
                     }
                 }
-               
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
                 {
                     for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
@@ -153,15 +149,13 @@
                     win = false;
                 }
             }
-
             if (win)
             {
                 Console.WriteLine();
-                Console.Write("YOU WIN");
+                Console.Write("YOU WIN : £");
                 int betMultiplying = bet * WINS;
+                Console.WriteLine(betMultiplying);
             }
-
-
         }
     }
 }
