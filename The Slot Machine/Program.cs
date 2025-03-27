@@ -25,7 +25,9 @@
             const int ROW_SIZE = 3;
             const int COLUMN_SIZE = 3;
             const int DIVIDING_TO_GET_CENTRE = 2;
-            const int WINS = 2;
+            const int WINS_CENTRE = 2;
+            const int WINS_ALL_LINES = 3;
+            const int WINS_DIAGONALS = 4;
 
             Console.WriteLine("SLOT MACHINE");
             Console.WriteLine();
@@ -48,8 +50,8 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    //grid[indexRow, indexColumn] = 1;
-                    grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM, HIGHER_RANGE_RANDOM_NUM);
+                    grid[indexRow, indexColumn] = 1;
+                    //grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM, HIGHER_RANGE_RANDOM_NUM);
                 }
             }
             //Print the content of the Grid
@@ -77,6 +79,13 @@
                         }
                     }
                 }
+                if (win)
+                {
+                    Console.WriteLine();
+                    Console.Write("YOU WIN : £");
+                    int betMultiplying = bet * WINS_ALL_LINES;
+                    Console.WriteLine(betMultiplying);
+                }
             }
             if (answer == ALL_VERTICALS)
             {
@@ -90,6 +99,13 @@
                             break;
                         }
                     }
+                }
+                if (win)
+                {
+                    Console.WriteLine();
+                    Console.Write("YOU WIN : £");
+                    int betMultiplying = bet * WINS_ALL_LINES;
+                    Console.WriteLine(betMultiplying);
                 }
             }
             //123
@@ -109,6 +125,13 @@
                             break;
                         }
                     }
+                }
+                if (win)
+                {
+                    Console.WriteLine();
+                    Console.Write("YOU WIN : £");
+                    int betMultiplying = bet * WINS_CENTRE;
+                    Console.WriteLine(betMultiplying);
                 }
             }
             bool winFirstDiagonal = true;
@@ -148,13 +171,13 @@
                 {
                     win = false;
                 }
-            }
-            if (win)
-            {
-                Console.WriteLine();
-                Console.Write("YOU WIN : £");
-                int betMultiplying = bet * WINS;
-                Console.WriteLine(betMultiplying);
+                if (win)
+                {
+                    Console.WriteLine();
+                    Console.Write("YOU WIN : £");
+                    int betMultiplying = bet * WINS_DIAGONALS;
+                    Console.WriteLine(betMultiplying);
+                }
             }
         }
     }
