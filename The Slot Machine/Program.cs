@@ -50,8 +50,8 @@
             {
                 for (int indexColumn = 0; indexColumn  < COLUMNS_VERTICALS; indexColumn++)
                 {
-                    grid[indexRow, indexColumn] = 1;
-                    //grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM, HIGHER_RANGE_RANDOM_NUM);
+                    //grid[indexRow, indexColumn] = 1;
+                    grid[indexRow, indexColumn] = number.Next(LOWER_RANGE_RANDOM_NUM, HIGHER_RANGE_RANDOM_NUM);
                 }
             }
             //Print the content of the Grid
@@ -66,6 +66,7 @@
             }
             //Check for wins
             bool win = true;
+            int betMultiplying = 0;
             if (answer == ALL_HORIZONTALS)
             {
                 for (int indexRow = 0; indexRow < COLUMNS_HORIZONTALS; indexRow++)
@@ -83,7 +84,7 @@
                 {
                     Console.WriteLine();
                     Console.Write("YOU WIN : £");
-                    int betMultiplying = bet * WINS_ALL_LINES;
+                    betMultiplying = bet * WINS_ALL_LINES;
                     Console.WriteLine(betMultiplying);
                 }
             }
@@ -104,7 +105,7 @@
                 {
                     Console.WriteLine();
                     Console.Write("YOU WIN : £");
-                    int betMultiplying = bet * WINS_ALL_LINES;
+                    betMultiplying = bet * WINS_ALL_LINES;
                     Console.WriteLine(betMultiplying);
                 }
             }
@@ -130,7 +131,7 @@
                 {
                     Console.WriteLine();
                     Console.Write("YOU WIN : £");
-                    int betMultiplying = bet * WINS_CENTRE;
+                    betMultiplying = bet * WINS_CENTRE;
                     Console.WriteLine(betMultiplying);
                 }
             }
@@ -175,7 +176,7 @@
                 {
                     Console.WriteLine();
                     Console.Write("YOU WIN : £");
-                    int betMultiplying = bet * WINS_DIAGONALS;
+                    betMultiplying = bet * WINS_DIAGONALS;
                     Console.WriteLine(betMultiplying);
                 }
             }
